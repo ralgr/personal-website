@@ -3,41 +3,43 @@
         <header class="header">
             <div class="header__inner">
                 <div class="header__logo-container">
-                    <img class="header__logo-icon" src="~/assets/img/stickBW.svg" alt="Kim Alexis Torres">
+                    <a href="#Projects">
+                        <img role="img" class="header__logo-icon" src="~/assets/img/stickBW.svg" alt="Stick">
+                    </a>
                 </div>
                 <nav class="header__nav" role="navigation">
                     <ul class="header__ulist">
                         <li class="header__list-item">
-                            <a class="header__nav-link" href="#Home" role="link">Home</a>
+                            <a class="header__nav-link" href="#Projects" role="link">Projects</a>
                         </li>
                         <li class="header__list-item">
                             <a class="header__nav-link" href="#About" role="link">About</a>
                         </li>
                         <li class="header__list-item">
-                            <a class="header__nav-link" href="#Activities" role="link">Activities</a>
+                            <a class="header__nav-link" href="#Home" role="link">Adventures</a>
                         </li>
                     </ul>
 
-                    <div :class="{header__burger: true, 'header__burger-transform': isActive}" @click="toAnimateMenu">
+                    <div role="menu" :class="{header__burger: true, 'header__burger-transform': isActive}" @click="toAnimateMenu">
                         <div class="header__burger-bar1"></div>
                         <div class="header__burger-bar2"></div>
                         <div class="header__burger-bar3"></div>   
                     </div>
                 </nav>
 
-                 <div :class="{'header__burger-menu': true, 'header__burger-on': isActive}">
+                 <div role="menubar" :class="{'header__burger-menu': true, 'header__burger-on': isActive}">
                     <ul class="header__burger-items">
-                        <li class="header__burger-list-item">
-                            <a :class="{'header__burger-list-link': true, 'header__burger-list-link--active': isActive}" 
-                                href="#Home" role="link">Home</a>
+                        <li role="menuitem" class="header__burger-list-item">
+                            <a oler="link" :class="{'header__burger-list-link': true, 'header__burger-list-link--active': isActive}" 
+                                href="#Projects" role="link">Projects</a>
                         </li>
-                        <li class="header__burger-list-item">
+                        <li role="menuitem" class="header__burger-list-item">
                             <a :class="{'header__burger-list-link': true, 'header__burger-list-link--active': isActive}" 
                                 href="#About" role="link">About</a>
                         </li>
-                        <li class="header__burger-list-item">
+                        <li role="menuitem" class="header__burger-list-item">
                             <a :class="{'header__burger-list-link': true, 'header__burger-list-link--active': isActive}" 
-                                href="#Activities" role="link">Activities</a>
+                                href="#Home" role="link">Adventures</a>
                         </li>
                     </ul>
                 </div>
@@ -257,7 +259,7 @@
     border-radius: 0 0 0 100rem;
     width: 0;
     height: 0;
-    background: rgb(98, 37, 177);
+    background: darkorange;
     z-index: 12;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -266,7 +268,7 @@
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
+            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -277,7 +279,7 @@
 .header__burger-on {
     visibility: visible;
     padding: 2.2rem 2.5rem;
-    width: 50vw;
+    width: 40vw;
     height: 80vh;
 }
 
@@ -285,22 +287,26 @@
 .header__burger-items {
     list-style: none;
     display: inline-block;
+    
+}
+
+/* Header burger li settings: >1024 */
+.header__burger-list-item { 
+    margin-bottom: 1rem;
 }
 
 /* Header burger innate settings: >1024 */
 .header__burger-list-link {
     font-size: 0rem;
     color: white;
-    font-weight: 600;
-    -webkit-transition: all .05s ease;
-    transition: all .05s ease;
+    font-weight: bold;
 }
 
 /* Header burger active settings: >1024 */
 .header__burger-list-link--active {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
-    letter-spacing: .25px;
-    font-size: 1.7rem;
+    letter-spacing: 0.15rem;
+    font-size: 1.2rem;
 }
 </style>
