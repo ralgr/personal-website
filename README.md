@@ -1,6 +1,6 @@
 # nuxt-project
 
-> Nuxt.js full-course project
+This project contains the code for my personal website.
 
 ## Build Setup
 
