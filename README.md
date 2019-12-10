@@ -1,5 +1,4 @@
-# nuxt-project
-
+# Project Summary
 This project contains the code for my personal website.
 
 ## Build Setup
